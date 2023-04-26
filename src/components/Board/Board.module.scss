@@ -1,0 +1,28 @@
+.Board {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 24px;
+}
+
+.BoardItem {
+  background: #ebecf0;
+  border-radius: 10px;
+  width: 95%;
+  padding: 12px;
+  overflow-y: auto;
+}
+
+.BoardItem__header {
+  width: 100%;  
+}
+
+.BoardItem__header h6 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: left;
+  color: #000000;
+}
