@@ -3,26 +3,49 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 24px;
+  margin-bottom: auto;
 }
 
 .BoardItem {
   background: #ebecf0;
   border-radius: 10px;
   width: 95%;
+  max-height: 100%;
   padding: 12px;
   overflow-y: auto;
+  height: fit-content;
 }
 
 .BoardItem__header {
-  width: 100%;  
+  width: 100%;
 }
 
 .BoardItem__header h6 {
-  font-family: "Roboto";
+  // font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
   text-align: left;
   color: #000000;
+}
+
+.BoardItem__body {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 8px 0;
+}
+
+.BoardItem__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.Issue {
+  padding: 8px;
+  background: #ffffff;
+  border-radius: 5px;
+  text-align: left;
 }
