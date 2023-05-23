@@ -12,4 +12,7 @@ export const AddButton = (props) => {
   );
 };
 
-export const SubmitButton = () => <button className={style.SubmitButton}>Submit</button>;
+export const SubmitButton = (props) => {
+  const {handleClick} = props;
+  return <button className={style.SubmitButton} onClick={handleClick}>Submit</button>;
+}

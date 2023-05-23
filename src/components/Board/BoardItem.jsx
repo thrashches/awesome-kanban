@@ -5,7 +5,7 @@ import { AddButton } from "../Buttons/Buttons";
 import { NewIssue } from "./NewIssue";
 
 export function BoardItem(props) {
-  const { role, issues, handleAddClick, edit } = props;
+  const { role, issues, handleAddClick, handleSubmitClick, edit } = props;
 
   return (
     <div className={style.BoardItem}>
@@ -14,7 +14,7 @@ export function BoardItem(props) {
       </div>
       <div className={style.BoardItem__body}>
         {issues?issues.map((issue)=><Issue issue={issue}/>):<></>}
-        {edit && role.name==='backlog'?<NewIssue/>:<></>}
+        {edit && role.name==='backlog'?<NewIssue handleSubmitClick={handleSubmitClick}/>:<></>}
       </div>
       <div className={style.BoardItem__footer}>
         {!(edit&& role.name==='backlog')?<AddButton onClick={handleAddClick}/>:<></>}

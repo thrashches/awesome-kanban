@@ -13,6 +13,10 @@
 }
 
 .SubmitButton {
+  display: inline-block;
+  height: 29px;
+  padding: 4px 15px;
+  width: fit-content;
   background: #0079bf;
   border-radius: 5px;
   color: #ffffff;
@@ -21,4 +25,9 @@
   font-size: 18px;
   line-height: 21px;
   text-align: center;
+}
+
+.SubmitButton:hover {
+  background: #0067A3;
+  ;
 }
