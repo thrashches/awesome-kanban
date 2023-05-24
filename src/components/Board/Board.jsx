@@ -31,10 +31,17 @@ export function Board(props) {
   ]);
 
   const [backlogEdit, setBacklogEdit] = useState(false);
+  const [dropdownShow, setDropdownShow] = useState(null);
 
   const handleBacklogAddClick = () => {
     setBacklogEdit(true);
   };
+
+  const handleAddClick = (board) => {
+    if (board !== 'backlog') {
+      setDropdownShow(board);
+    }
+  }
 
   const handleSubmitClick = (name) => {
     if (name.length) {
@@ -45,8 +52,8 @@ export function Board(props) {
         status: "backlog",
       };
       setData([...data, newIssue]);
-      setBacklogEdit(false);
     }
+    setBacklogEdit(false);
   };
 
   return (
