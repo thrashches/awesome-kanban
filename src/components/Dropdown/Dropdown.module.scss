@@ -13,3 +13,24 @@
 .DropdownItem:hover {
   background: #DEDEDE;
 }
+
+.DropdownInput {
+    padding: 8px;
+    background: #ffffff;
+    border-radius: 5px;
+    text-align: left;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    min-height: 35px;
+    color: #000000;
+  }
+
+.DropdownInput::after {
+    width: 30px;
+    height: 30px;
+    background: url("./Arrow.svg");
+    right: 10px;
+}
